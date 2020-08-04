@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
     <title>Etch-A-Sketch</title>
 </head>
+
 <body>
 
-    <button id="grid-size">Clear Grid</button>
+    
+
+    <div id="container-buttons">
+        <h1 id="main-heading">Etch-A-Sketch</h1>
+        <button id="grid-lines">Show Grid</button>
+        <button id="grid-size">Change Grid Size</button>
+        <button id="random-colors">Random Colors</button>
+        <button id="erase">Clear Grid</button>
+        
+    </div>
+
+    <div id="container-color">
+        <h2>Choose Color:</h2>
+        <input id="color-picker" name="Color Picker" type="color" value="#000000">
+        <p id="color-value"></p>
+    </div>
+
+
+
 
     <div id="container">
+
 
     </div>
 
@@ -18,4 +42,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
