@@ -7,7 +7,7 @@ const buttonColorPicker = document.getElementById("color-picker");
 const buttonGridLines = document.getElementById("grid-lines");
 const buttonErase = document.getElementById("erase");
 const colorValue = document.getElementById("color-value");
- 
+
 
 
 
@@ -27,7 +27,7 @@ function makeGrid(rows, cols) {
 
 
 // Call Function Make Grid
-makeGrid(32, 32);
+makeGrid(16, 16);
 
 // Reset Grid Every Time User Give New Size
 function resetGrid() {
@@ -62,10 +62,10 @@ function getRandomColor() {
 function randomHoverEffect() {
     for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].addEventListener("mouseover", function () {
+
             gridItem[i].style.backgroundColor = getRandomColor();
-
         })
-
+        
     }
 }
 
@@ -73,10 +73,9 @@ function randomHoverEffect() {
 function colorHoverEffect() {
     for (let i = 0; i < gridItem.length; i++) {
         gridItem[i].addEventListener("mouseover", function () {
+
             gridItem[i].style.backgroundColor = buttonColorPicker.value;
-
         })
-
     }
     colorValue.style.color = buttonColorPicker.value;
     colorValue.textContent = buttonColorPicker.value;
@@ -90,11 +89,17 @@ function gridLines() {
     }
 }
 
+// Clear Pixels Brush
+function clearPixels() {
+    for (let i = 0; i < gridItem.length; i++) {
+        gridItem[i].style.backgroundColor = "white";
+
+    }
+}
+
 
 
 buttonRandom.addEventListener("click", randomHoverEffect);
 buttonColorPicker.addEventListener("input", colorHoverEffect);
 buttonGridLines.addEventListener("click", gridLines);
-buttonErase.addEventListener("click", function(){
-    window.location.reload();
-});
+buttonErase.addEventListener("click", clearPixels);
