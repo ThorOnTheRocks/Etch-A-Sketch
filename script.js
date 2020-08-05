@@ -41,7 +41,7 @@ function resetGrid() {
 // Change Grid Size Event
 buttonGrid.addEventListener("click", function () {
     resetGrid();
-    var size = prompt("Choose grid size(must enter a value between 1 and 128)");
+    var size = prompt("Choose grid size(must enter a value between 16 and 128)");
     var num1 = parseInt(size);
     var num2 = parseInt(size);
     if(size < 16 || size > 128){
